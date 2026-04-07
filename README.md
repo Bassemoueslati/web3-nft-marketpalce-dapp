@@ -60,6 +60,8 @@ npm run dev
 
 - Health: `http://localhost:4000/health`
 - Endpoint pin metadata: `POST /api/pin-json`
+- Endpoint upload fichier: `POST /api/pin-file` (champ multipart: `file`)
+- Cote frontend, apres upload fichier, une transaction `0 ETH` est envoyee via MetaMask (self-transfer avec CID dans `data`) pour tracer l'operation on-chain.
 
 Si `PINATA_JWT` est absent, backend utilise un mode demo local.
 
@@ -72,6 +74,11 @@ npm run dev
 ```
 
 Ouvrir: `http://localhost:3000`
+
+Pages principales:
+- `http://localhost:3000/` -> Dashboard (etat backend, stats marketplace)
+- `http://localhost:3000/create` -> Upload IPFS, Pin Metadata, Mint NFT
+- `http://localhost:3000/marketplace` -> List, Read, Buy, Cancel listings
 
 ## 4) Utilitaire IPFS simple
 ```bash
